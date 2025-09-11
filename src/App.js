@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
      <h1>Welcome to React Application</h1>
-     <h1>Comflex Technology </h1>
+     <h1>Anand Varma </h1>
     </div>
   );
 }
