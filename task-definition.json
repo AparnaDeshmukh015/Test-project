@@ -1,0 +1,91 @@
+{
+  "compatibilities": [
+    "EC2",
+    "FARGATE"
+  ],
+  "containerDefinitions": [
+    {
+      "cpu": 0,
+      "environment": [],
+      "environmentFiles": [],
+      "essential": true,
+      "image": "823027858104.dkr.ecr.ap-southeast-1.amazonaws.com/react-app",
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/Task-react-demo-app",
+          "awslogs-create-group": "true",
+          "awslogs-region": "ap-southeast-1",
+          "awslogs-stream-prefix": "ecs"
+        },
+        "secretOptions": []
+      },
+      "mountPoints": [],
+      "name": "react-task-image",
+      "portMappings": [
+        {
+          "appProtocol": "http",
+          "containerPort": 80,
+          "hostPort": 80,
+          "name": "react-task-image-80-tcp",
+          "protocol": "tcp"
+        }
+      ],
+      "systemControls": [],
+      "ulimits": [],
+      "volumesFrom": []
+    }
+  ],
+  "cpu": "1024",
+  "enableFaultInjection": false,
+  "executionRoleArn": "arn:aws:iam::823027858104:role/ECSTaskExecutionRole_KLIKFM",
+  "family": "Task-react-demo-app",
+  "memory": "3072",
+  "networkMode": "awsvpc",
+  "placementConstraints": [],
+  "registeredAt": "2025-09-11T09:33:53.342Z",
+  "registeredBy": "arn:aws:sts::823027858104:assumed-role/AWSReservedSSO_AWSAdministratorAccess_bc20b3699cdce860/admin_asphuzaifa@KeppelGroup.onmicrosoft.com",
+  "requiresAttributes": [
+    {
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "name": "ecs.capability.execution-role-awslogs"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
+    },
+    {
+      "name": "ecs.capability.execution-role-ecr-pull"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+    },
+    {
+      "name": "ecs.capability.task-eni"
+    },
+    {
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+    }
+  ],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "revision": 1,
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "status": "ACTIVE",
+  "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:823027858104:task-definition/Task-react-demo-app:1",
+  "taskRoleArn": "arn:aws:iam::823027858104:role/ECSTaskExecutionRole_KLIKFM",
+  "volumes": [],
+  "tags": []
+}
+
