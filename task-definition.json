@@ -37,7 +37,7 @@
     }
   ],
   "cpu": "1024",
-  "enableFaultInjection": false,
+  
   "executionRoleArn": "arn:aws:iam::823027858104:role/ECSTaskExecutionRole_KLIKFM",
   "family": "Task-react-demo-app",
   "memory": "3072",
